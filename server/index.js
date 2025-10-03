@@ -16,7 +16,9 @@ app.get('/demo',(req,res)=>{
     res.send([{"msg":"As-salamu alaykum"}])
 })
 
+
+app.use('/api/routes', authRoute);
+
 app.listen(3000,(req,res)=>{
     console.log("App is Running on port 3000")
 })
-app.use('/api/routes', authRoute);
